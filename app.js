@@ -2,7 +2,7 @@ let logEl;
 
 const log = (s) => {
   const curr = logEl.innerText;
-  logEl.innerHTML = curr + "\n" + s;
+  logEl.innerHTML = curr + "<br />" + s;
 };
 
 const clearLog = () => {
