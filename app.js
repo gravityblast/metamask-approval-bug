@@ -31,7 +31,8 @@ window.addEventListener("load", async () => {
 
     const currentAllowance = await contract.allowance(signer.address, roundVotingStrategyAddress);
     console.log(currentAllowance);
-    log(`currentAllowance: ${ethers.formatUnits(currentAllowance.toString())}<b>ok</b>`);
+    log(`approval for ${roundVotingStrategyAddress}`);
+    log(`currentAllowance: ${ethers.formatUnits(currentAllowance.toString())}`);
 
     btnApprove.addEventListener("click", async (e) => {
       clearLog();
