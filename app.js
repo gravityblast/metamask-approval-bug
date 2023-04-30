@@ -1,8 +1,9 @@
 let logEl;
 
 const log = (s) => {
-  const curr = logEl.innerText;
-  logEl.innerHTML = curr + "<br />" + s;
+  const line = document.createElement("div");
+  line.innerHTML = s;
+  logEl.appendChild(line);
 };
 
 const clearLog = () => {
@@ -12,6 +13,7 @@ const clearLog = () => {
 window.addEventListener("load", async () => {
   logEl = document.getElementById("log");
   const btnConnect = document.getElementById("btnConnect");
+
   btnConnect.addEventListener("click", async (e) => {
     e.preventDefault();
 
