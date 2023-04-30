@@ -30,6 +30,7 @@ window.addEventListener("load", async () => {
       const roundVotingStrategyAddress =
         "0x10Cb6dEf9B7Eb5cEFA5E14caBAb1109fFf16B7B9";
       const abi = ["function approve(address,uint256)"];
+      log(`waiting for tx signature...`);
       const contract = new ethers.Contract(daiAddress, abi).connect(signer);
       const oneDai = ethers.parseUnits("1", "ether");
       const tx = await contract.approve(roundVotingStrategyAddress, oneDai);
